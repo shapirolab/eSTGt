@@ -1,0 +1,53 @@
+<Program>
+<ExecParams>
+	<SimTime>
+		100
+	</SimTime>
+	<Seed>
+		0
+	</Seed>
+</ExecParams>
+<FunHandleName> updating_Empty </FunHandleName>
+<Rule>
+	<Prod>
+		SCASym -> 0.1 {SCASym,SCSym}_1
+	</Prod>
+	<InitPop>
+		1
+	</InitPop>
+</Rule>
+<Rule>
+	<Prod>
+		SCSym -> 0.1 {SCSym,SCSym}_1
+	</Prod>
+	<InternalState>
+		<Name> CounterStoch </Name>
+		<InitVal> 0 </InitVal>
+		<FuncHandleName> FuncUpdateCounterStoch </FuncHandleName>
+	</InternalState>	
+	<ConditionalTransition>
+		<Condition> CounterStoch > 5 </Condition>
+		<Transition> Diff </Transition> 
+	</ConditionalTransition>	
+	<InitPop>
+		0
+	</InitPop>
+</Rule>
+<Rule>
+	<Prod>
+		Diff -> 1 {Diff,Diff}_0.5 | {0}_ow
+	</Prod>
+	<InternalState>
+		<Name> CounterStoch </Name>
+		<InitVal> 0 </InitVal>
+		<FuncHandleName> FuncUpdateCounterStoch </FuncHandleName>
+	</InternalState>	
+	<ConditionalTransition>
+		<Condition> CounterStoch > 10 </Condition>
+		<Transition> {0} </Transition> 
+	</ConditionalTransition>	
+	<InitPop>
+		0
+	</InitPop>
+</Rule>
+</Program>

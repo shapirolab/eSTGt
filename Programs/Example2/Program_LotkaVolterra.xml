@@ -1,0 +1,28 @@
+<Program>
+<ExecParams>
+	<SimTime>
+		10
+	</SimTime>
+	<Seed>
+		1
+	</Seed>
+</ExecParams>
+
+<FunHandleName> updating_LotkaVolterra </FunHandleName>
+<Rule>
+	<Prod>
+		Prey -> 1 {Prey,Prey}_0.5 | {0}_0.5
+	</Prod>
+	<InitPop>
+		900
+	</InitPop>
+</Rule>
+<Rule>
+	<Prod>
+		Predator -> 1 {Predator,Predator}_0.5 | {0}_0.5
+	</Prod>
+	<InitPop>
+		900
+	</InitPop>
+</Rule>
+</Program>

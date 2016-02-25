@@ -1,0 +1,20 @@
+<Program>
+<ExecParams>
+	<SimTime>
+		12
+	</SimTime>
+	<Seed>
+		0
+	</Seed>
+</ExecParams>
+
+<FunHandleName> updating_LogisticVerhulst </FunHandleName>
+<Rule>
+	<Prod>
+		A -> 1 {A,A}_1 |{0}_0
+	</Prod>
+	<InitPop>
+		1
+	</InitPop>
+</Rule>
+</Program>

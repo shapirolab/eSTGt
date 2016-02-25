@@ -1,0 +1,45 @@
+<Program>
+<ExecParams>
+	<SimTime>
+		50
+	</SimTime>
+	<Seed>
+		0
+	</Seed>
+</ExecParams>
+
+<FunHandleName> updating_Empty </FunHandleName>
+<Rule>
+	<Prod>
+		SC -> 0.1 {SC,SC}_0.5 | {Diff,Diff}_ow
+	</Prod>
+	<InternalState>
+		<Name> MS </Name>
+		<InitVal> 0 </InitVal>
+		<FuncHandleName> FuncUpdateMS </FuncHandleName>
+		<DuplicateNum> 100 </DuplicateNum>
+	</InternalState>
+	<InitPop>
+		5
+	</InitPop>
+</Rule>
+<Rule>
+	<Prod>
+		Diff -> 1 {Diff,Diff}_0.49 | {0}_ow
+	</Prod>
+	<InternalState>
+		<Name> MS </Name>
+		<InitVal> 0 </InitVal>
+		<FuncHandleName> FuncUpdateMS </FuncHandleName>
+		<DuplicateNum> 100 </DuplicateNum>
+	</InternalState>	
+	<InternalState>
+		<Name> Gen </Name>
+		<InitVal> 0 </InitVal>
+		<FuncHandleName> FuncUpdateGen </FuncHandleName>
+	</InternalState>	
+	<InitPop>
+		5
+	</InitPop>
+</Rule>
+</Program>
