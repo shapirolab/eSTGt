@@ -1,4 +1,4 @@
-function [ newMS ] = FuncUpdateMS( MS )
+function [ newMS ] = FuncUpdateMS( MS, T )
 %FuncUpdateMS updates the MS values according to the stepwise model
 Mu = 1/10000; % the mutation rate (10^-4)
 

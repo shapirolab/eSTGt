@@ -1,4 +1,4 @@
-function [ newGen ] = FuncUpdateGen( Gen )
+function [ newGen ] = FuncUpdateGen( Gen, T )
 %FuncUpdateGen updates the generation
 newGen = Gen + 1;
 
