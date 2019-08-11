@@ -1,7 +1,7 @@
 <Program>
 <ExecParams>
 	<SimTime>
-		50
+		100
 	</SimTime>
 	<Seed>
 		0
@@ -17,10 +17,10 @@
 		<Name> MS </Name>
 		<InitVal> 0 </InitVal>
 		<FuncHandleName> FuncUpdateMS </FuncHandleName>
-		<DuplicateNum> 100 </DuplicateNum>
+		<DuplicateNum> 10 </DuplicateNum>
 	</InternalState>
 	<InitPop>
-		5
+		1
 	</InitPop>
 </Rule>
 <Rule>
@@ -31,7 +31,7 @@
 		<Name> MS </Name>
 		<InitVal> 0 </InitVal>
 		<FuncHandleName> FuncUpdateMS </FuncHandleName>
-		<DuplicateNum> 100 </DuplicateNum>
+		<DuplicateNum> 10 </DuplicateNum>
 	</InternalState>	
 	<InternalState>
 		<Name> Gen </Name>
@@ -39,7 +39,7 @@
 		<FuncHandleName> FuncUpdateGen </FuncHandleName>
 	</InternalState>	
 	<InitPop>
-		5
+		0
 	</InitPop>
 </Rule>
 </Program>

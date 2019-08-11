@@ -205,7 +205,7 @@ function [Rules,DeadInd,Nodes,id,livenodes,Xupdate] = updateNode(Rules,DeadInd,N
                             % accordingly.
                             ISname = Rules.Prod{type}.InternalStatesNames{j};
                             if (isfield(Nodes{parentType}(rnd),'InternalStates') && isfield(Nodes{parentType}(rnd).InternalStates,ISname))
-                                Nodes{type}(len+1).InternalStates.(ISname) = Rules.Prod{type}.InternalStates.(ISname).hFunc(Nodes{parentType}(rnd).InternalStates.(ISname), T);
+                                Nodes{type}(len+1).InternalStates.(ISname) = Rules.Prod{type}.InternalStates.(ISname).hFunc(Nodes{parentType}(rnd).InternalStates.(ISname), T, Nodes, parentType, rnd, rep);
                             else
                                 Nodes{type}(len+1).InternalStates.(ISname) = repmat(Rules.Prod{type}.InternalStates.(ISname).InitVal,1,Rules.Prod{type}.InternalStates.(ISname).DupNum);
                             end
