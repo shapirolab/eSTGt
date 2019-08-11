@@ -19,10 +19,21 @@
 		<FuncHandleName> FuncUpdateMS </FuncHandleName>
 		<DuplicateNum> 10 </DuplicateNum>
 	</InternalState>
+    <InternalState>
+		<Name> ChildrenLifeTokens </Name>
+		<InitVal> 5 </InitVal>
+		<FuncHandleName> FuncUpdateChildrenLifeTokens </FuncHandleName>
+		<DuplicateNum> 2 </DuplicateNum>
+	</InternalState>
+	<ConditionalTransition>
+		<Condition> max(ChildrenLifeTokens) == 0 </Condition>
+		<Transition> {0} </Transition> 
+	</ConditionalTransition>
 	<InitPop>
 		1
 	</InitPop>
 </Rule>
+
 <Rule>
 	<Prod>
 		Diff -> 1 {Diff,Diff}_0.49 | {0}_ow
@@ -32,12 +43,22 @@
 		<InitVal> 0 </InitVal>
 		<FuncHandleName> FuncUpdateMS </FuncHandleName>
 		<DuplicateNum> 10 </DuplicateNum>
-	</InternalState>	
+	</InternalState>
 	<InternalState>
 		<Name> Gen </Name>
 		<InitVal> 0 </InitVal>
 		<FuncHandleName> FuncUpdateGen </FuncHandleName>
-	</InternalState>	
+	</InternalState>
+	<InternalState>
+		<Name> ChildrenLifeTokens </Name>
+		<InitVal> 5 </InitVal>
+		<FuncHandleName> FuncUpdateChildrenLifeTokens </FuncHandleName>
+		<DuplicateNum> 2 </DuplicateNum>
+	</InternalState>
+	<ConditionalTransition>
+		<Condition> max(ChildrenLifeTokens) == 0 </Condition>
+		<Transition> {0} </Transition> 
+	</ConditionalTransition>
 	<InitPop>
 		0
 	</InitPop>
